@@ -30,4 +30,6 @@ jobs:
       run: snyk auth $SNYK_TOKEN
 
     - name: Run Snyk to check for vulnerabilities
+      env:
+        GITHUB_REPOSITORY: ${{ github.repository }}
       run: snyk test --org=${{ github.repository_owner }} --project-name=${{ github.event.repository.name }}
