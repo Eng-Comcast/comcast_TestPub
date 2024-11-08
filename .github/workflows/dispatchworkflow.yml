@@ -1,4 +1,4 @@
-name: Dispatch Workflow
+name: DispatchWorkflow
 
 on:
   push:
